@@ -8,11 +8,13 @@ body{
     height: 100vh;
     margin:0;
     font-family: 'Josefin Sans', sans-serif;
+    color: white; 
     display: flex;
     flex-direction: column; 
     /* lays out things vertically instead of horizontally */
     justify-content: center; 
     align-items: center; 
+    background-image: repeating-linear-gradient(RoyalBlue, DodgerBlue, CornflowerBlue, DeepSkyBlue, LightSkyBlue )
 }
 
 /* Every element here is a box */
@@ -21,13 +23,13 @@ section{
     grid-template-columns: 10vmin 10vmin 10vmin 10vmin 10vmin 10vmin 10vmin;
     grid-template-rows: 10vmin 10vmin 10vmin 10vmin 10vmin 10vmin;
     grid-gap: 2vmin;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 21px;
-    background: blue;
+    background: MediumBlue;
 }
 /* selecting specifi divs withing specific area */
 section div{
     border-radius: 50%;
-    border: 1px solid pink;
+    border: 1px solid grey;
     background: white;
 }
