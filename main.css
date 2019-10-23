@@ -1,23 +1,23 @@
-*{
+/* *{
     box-sizing: border-box;
-    /* this helps us cisualize all of our elements */
+    
 }
-/* setting up reset for the CSS  */
+
 body{
-    /* will use the view port to set that up that will take up th screen size this will allow us to make our body centered. */
+    
     height: 100vh;
     margin:0;
     font-family: 'Josefin Sans', sans-serif;
-    /* color: white;  */
+  
     display: flex;
     flex-direction: column; 
-    /* lays out things vertically instead of horizontally */
+
     justify-content: center; 
     align-items: center; 
     background-image: linear-gradient(RoyalBlue, DodgerBlue, CornflowerBlue, DeepSkyBlue, LightSkyBlue )
 }
 
-/* Every element here is a box */
+
 section{
     display: grid; 
     grid-template-columns: 10vmin 10vmin 10vmin 10vmin 10vmin 10vmin 10vmin;
@@ -27,9 +27,25 @@ section{
     padding: 21px;
     background: MediumBlue;
 }
-/* selecting specifi divs withing specific area */
+
 section div{
     border-radius: 50%;
     border: 1px solid grey;
     background: white;
-}
+} */
+body {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  .container{
+    background-image: linear-gradient(RoyalBlue, DodgerBlue, CornflowerBlue, DeepSkyBlue, LightSkyBlue );
+    padding: 20px 0 0 10px;
+  }
+  .col {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+    margin: 5px;
+  }
