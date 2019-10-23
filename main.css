@@ -8,7 +8,7 @@ body{
     height: 100vh;
     margin:0;
     font-family: 'Josefin Sans', sans-serif;
-    color: white; 
+    /* color: white;  */
     display: flex;
     flex-direction: column; 
     /* lays out things vertically instead of horizontally */
