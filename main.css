@@ -14,7 +14,7 @@ body{
     /* lays out things vertically instead of horizontally */
     justify-content: center; 
     align-items: center; 
-    background-image: repeating-linear-gradient(RoyalBlue, DodgerBlue, CornflowerBlue, DeepSkyBlue, LightSkyBlue )
+    background-image: linear-gradient(RoyalBlue, DodgerBlue, CornflowerBlue, DeepSkyBlue, LightSkyBlue )
 }
 
 /* Every element here is a box */
