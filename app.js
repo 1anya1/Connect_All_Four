@@ -30,13 +30,13 @@ $(() => {
     function turns () {
     if(turn%2===0){
         // alert('player1');// how to create turns for each player?
-    $(event.target).css('background-color', 'yellow');
+    $(event.target).css('background-color', 'yellow').addClass('yellow');
     player1.cells.push($(event.target).attr('id'));
     $(event.target).off('click');
     // player1.push($(event.target).attr('id'));
     player1.cells.sort();
     } else {
-    $(event.target).css('background-color', 'red');
+    $(event.target).css('background-color', 'red').addClass('red');
     player2.cells.push($(event.target).attr('id'));
     $(event.target).off('click');
     player2.cells.sort();
@@ -47,8 +47,18 @@ $(() => {
 
 }
     $('.empty').on('click', turns ); //how to make sure that the class doesnt get reassignes and player is unable to click the play that was clicked. Also how to assign each one of the id divs to a matrix of array play
-
-
+    
+    function bottomCell () {
+    var $columnMarker=$('.col').siblings();
+    for( let i=0; i<$columnMarker.length; i++){
+        console.log($columnMarker)
+        if($columnMarker.class()===('empty red') ||$columnMarker.class===('yellow')){
+            return null;
+        }
+    }
+    
+}
+bottomCell();
 });
 
 
