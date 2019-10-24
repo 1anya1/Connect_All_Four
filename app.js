@@ -53,7 +53,7 @@ $(() => {
     for( let i=0; i<$columnMarker.length; i++){
         console.log($columnMarker)
         if($columnMarker.class()===('empty red') ||$columnMarker.class===('yellow')){
-            return null;
+            return null;// what Im trying to do here is see if the column is occupied by class of red or yellow meaning that this cell was played already 
         }
     }
     
