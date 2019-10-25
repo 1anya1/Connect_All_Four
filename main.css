@@ -1,42 +1,38 @@
-body {
-    background-image: linear-gradient(RoyalBlue, DodgerBlue, CornflowerBlue, DeepSkyBlue, LightSkyBlue );
-    font-family: 'Josefin Sans', sans-serif;
-    color: white;
-    margin: 0;
-  }
-  h1,h2,h3 {
-    text-align: center;
-    margin: 0;
-    padding: 15px;
-  }
-  .board {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: MediumBlue;
-    padding: 21px;
-  }
-  #restart {
-    font-family: 'Josefin Sans', sans-serif;
-    width: 200px;
-    height: 60px;
-    display: block;
-    text-align: center;
-    background-image:linear-gradient(DodgerBlue, CornflowerBlue, DeepSkyBlue);
-    color:White;
-    font-size: 21px;
-    margin-top: 21px;
-    margin-bottom: 21px;
-    margin-left: auto;
-    margin-right: auto;
-      
-  }
-  .board button {
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    background-color: white;
+  *{
+    box-sizing: border-box;
     
-    margin: 1px;
-    top: 0;
-    outline: none;
+}
+body{
+    
+    height: 100vh;
+    margin:0;
+    font-family: 'Josefin Sans', sans-serif;
+  
+    display: flex;
+    flex-direction: column; 
+
+    justify-content: center; 
+    align-items: center; 
+    background-image: linear-gradient(RoyalBlue, DodgerBlue, CornflowerBlue, DeepSkyBlue, LightSkyBlue )
+} 
+
+
+
+body {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
   }
+  .container{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 10vmin 10vmin 10vmin 10vmin 10vmin 10vmin;
+    background-color: MediumBlue;
+  }
+   .empty{
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 5px;
+  }
+
