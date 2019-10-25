@@ -13,10 +13,10 @@ $(()=>{ ///on load function
     let turn;
     let winner
     
-    var winningCombos = [
-      [1,1,1,1],
-      [-1,-1,-1,-1]
-    ];
+    // var winningCombos = [
+    //   [1,1,1,1],
+    //   [-1,-1,-1,-1]
+    // ];
     
     
     // element ref

@@ -16,7 +16,8 @@ body {
     grid-template-rows: 10vmin 10vmin 10vmin 10vmin 10vmin 10vmin;
     grid-gap: 1vmin;
     border: 1px solid gray;
-    padding: 10px;
+    padding: 21px;
+    margin-bottom: 10vmin;
     background:MediumBlue;
   }
   
@@ -31,7 +32,7 @@ body {
     grid-gap: 1vmin;
   }
   section.columnSelector > div{ 
-    border-top: 11vmin solid LightBlue;
+    border-top: 6vmin solid rgba(53, 50, 154, 0.878);
     border-left: 5vmin solid transparent;
     border-right: 5vmin solid transparent;
     margin-bottom: 5px;
