@@ -5,20 +5,12 @@ $(()=>{ ///on load function
       '0': 'white',
       '1': 'yellow',
       '-1': 'red'
-    
     }
-    
     //variables
     let board; 
     let turn;
     let winner
-    
-    // var winningCombos = [
-    //   [1,1,1,1],
-    //   [-1,-1,-1,-1]
-    // ];
-    
-    
+
     // element ref
     const messageElement = document.getElementById('message'); // global variable for message finds id of message
     
@@ -26,7 +18,6 @@ $(()=>{ ///on load function
     // adding event listner on the column selector 
     document.querySelector('section.columnSelector') //this returns the DOM element
     .addEventListener('click',handleClick );// creating event listner for the specific event
-    
     
     //functions
     initGame(); ///calling on the function since its a function declaration, init also calls the render that renders the board 
@@ -43,7 +34,6 @@ $(()=>{ ///on load function
       turn = 1;
       winner = null; //1 -1 null and T for the tie for potential values 
       renderBoard(); //calling on function render 
-    
     }
     
     function renderBoard () {  /// from state to dom transfer , render the board for each nested column render the board 
@@ -63,7 +53,7 @@ $(()=>{ ///on load function
         div.style.backgroundColor = playersColors[cellVal]; // this renders the board 
         });
       
-        });
+    });
         //rendering message on the scereen
     if(winner){
       if(winner === 'T'){ /// need to implement finction for this !
@@ -71,11 +61,11 @@ $(()=>{ ///on load function
     }
     else {
       messageElement.textContent = `${playersColors[winner].toUpperCase()}'s Wins`;//calling on the object of Players Colors  using square bracket notation // need to uppercase this 
-    }
+        }
     }else {
       // messageElement.textContent = `${turn}'s Turn`;//calling on the turn of player 1 or -1;
       messageElement.textContent = `${playersColors[turn].toUpperCase()}'s Turn`;//calling on the object of Players Colors  using square bracket notation // need to uppercase this 
-    }
+     }
     
     };
     
@@ -122,10 +112,9 @@ $(()=>{ ///on load function
       const columnArr = board[columnIdx];
       return ( Math.abs(columnArr[rowIdx] + columnArr[rowIdx + 1] + columnArr[rowIdx + 2] + columnArr[rowIdx + 3]) === 4 ) ? columnArr[rowIdx] : null;
     }
-    
     function checkRight (columnIdx, rowIdx){
       if(columnIdx>3) return null;
       return ( Math.abs(board[columnIdx][rowIdx] + board[columnIdx + 1][rowIdx] + board[columnIdx + 2][rowIdx] + board[columnIdx + 3][rowIdx]) === 4 ) ? board[columnIdx][rowIdx] : null;
     }
-    });
+});
     
