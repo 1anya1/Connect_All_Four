@@ -49,10 +49,10 @@ $(() => {
     $('.empty').on('click', turns ); //how to make sure that the class doesnt get reassignes and player is unable to click the play that was clicked. Also how to assign each one of the id divs to a matrix of array play
     
     function bottomCell () {
-    var $columnMarker=$('.col').siblings();
+    var $columnMarker=$('.col').find('div');
     for( let i=0; i<$columnMarker.length; i++){
         console.log($columnMarker)
-        if($columnMarker.class()===('empty red') ||$columnMarker.class===('yellow')){
+        if($('div').class()===('empty red') ||$columnMarker.class===('empty yellow')){
             return null;// what Im trying to do here is see if the column is occupied by class of red or yellow meaning that this cell was played already 
         }
     }

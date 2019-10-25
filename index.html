@@ -1,24 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html>
+  <head>
+    <meta charset="utf-8">
     <title>Connect Four</title>
-    <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700&display=swap" rel="stylesheet">
     <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-  
-   
-</head>
-<body>
-    <h1>Connect Four</h1>
-    <h3>The Classic Vertical Four-In-A-Row Game</h3>
-    <h2 id="message"></h2>
-    
-    <script src="app.js"></script>
-</body>
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="main.css" type="text/css">
+        <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Connect Four</h1>
+      <h2>The Classic Vertical Four-In-A-Row Game</h2>
+      <h3>Click On A Row To Start The Game ;)</h3>
+
+      <table id="connectFourBoard" class="board board-fade">
+        <tr>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+        </tr>
+        <tr>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+        </tr>
+        <tr>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+        </tr>
+        <tr>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+        </tr>
+        <tr>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+        </tr>
+        <tr>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+          <td><button type="button"></button></td>
+        </tr>
+      </table>
+	  <div class="buttonContainer">
+        <button id="reloadGame">Reload Game</button>
+      </div>
+    </div>
+  </body>
 </html>
