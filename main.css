@@ -17,14 +17,26 @@ body {
   }
   #restart {
     font-family: 'Josefin Sans', sans-serif;
-      width: 200px;
-      height: 60px;
+    width: 200px;
+    height: 60px;
     display: block;
     text-align: center;
     background-image:linear-gradient(DodgerBlue, CornflowerBlue, DeepSkyBlue);
-      color:White;
-      font-size: 21px;
-      margin-left: auto;
+    color:White;
+    font-size: 21px;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    margin-left: auto;
     margin-right: auto;
       
+  }
+  .board button {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    
+    margin: 1px;
+    top: 0;
+    outline: none;
   }

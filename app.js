@@ -1,4 +1,12 @@
 $(() => {
+    //-----! restarting the game -- Event Handler! ----//
+    $("#restart").on('click', function() {  //calling on a button restart
+        $(".board").find("* button").css('background-color', 'white').removeClass("clicked");// looking at board and finding all of the buttons with class clicked 
+        $(".board button").removeClass("game-over-buttons"); // removing class of buttons that we called for game over 
+        $(".board").removeClass("game-over-board"); /// restarting the board with a new one 
+    });
+
+        
 //     // my constants
 //     const player1={  //objects that will hold all of the data for the data
 //         cells:[]
