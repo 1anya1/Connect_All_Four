@@ -4,3 +4,27 @@ body {
     color: white;
     margin: 0;
   }
+  h1,h2,h3 {
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+  }
+  .board {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: MediumBlue;
+    padding: 21px;
+  }
+  #restart {
+    font-family: 'Josefin Sans', sans-serif;
+      width: 200px;
+      height: 60px;
+    display: block;
+    text-align: center;
+    background-image:linear-gradient(DodgerBlue, CornflowerBlue, DeepSkyBlue);
+      color:White;
+      font-size: 21px;
+      margin-left: auto;
+    margin-right: auto;
+      
+  }
