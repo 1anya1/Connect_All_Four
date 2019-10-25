@@ -21,8 +21,8 @@ document.querySelector('section.columnSelector') //this returns the DOM element
 
 
 //functions
-init(); /// board rendering, players position, setting of null to win position
-function init(){
+initGame(); /// board rendering, players position, setting of null to win position
+function initGame(){
   board = [
     [0,0,0,0,0,0], //column 1 starts with bottom left (c0r0) foing all the way up tp (cor6)
     [0,0,0,0,0,0], // column 2
@@ -34,17 +34,17 @@ function init(){
   ];
   turn = 1;
   winner = null; //1 -1 null and T for the tie for potential values 
-  render(); //calling on function render 
+  renderBoard(); //calling on function render 
 
 }
-function render () {  /// from state to dom transfer , render the board for each nested column render the board 
+function renderBoard () {  /// from state to dom transfer , render the board for each nested column render the board 
     board.forEach(function(columnArr, columnIdx){
     // hide or show columns marker depending if there are zeros or not ( if the column is full disable the triangle)
     const marker = document.getElementById(`column${columnIdx}`)
     if(columnArr.indexOf(0)=== -1){ // this represents a full column.. eek column is full 
       marker.style.visibility = 'hidden'; // this hides the column triangle if it is full 
     } else{
-      marker.style.visibility = 'visible';
+      marker.style.visibility = 'visible';//if the column is not full the markr will show 
     }
     //looping through the arrays in the board, using two parameters colmn array and extracting the index of the column array 
     columnArr.forEach(function(cellVal, rowIndex ){
@@ -57,6 +57,29 @@ function render () {  /// from state to dom transfer , render the board for each
       });
       //rendering message
 
+function handleClick(event){ // event handler for when someone clicks on the column selector 
+  // console.log(event.target) ;
+  //get id index of columnSelector clicked 
+  let index= parseInt(event.target.id.replace('column',''));   //grabbig each id of the event we are clicking on, replace removes a specific item from the string and replacing it with an empty string. 
+  // this code insures that the selector its self is clicked and not the surrounding area. Parse Int will give us a number from that string. If the result is not a number the value will be ignored. 
+  if(isNaN(index) || winner) return; //if the value is a number then it is true, or if there is already a winner or a tie exit the function. 
+  console.log(index);
+  //getting olumn array and the board array 
+  let columnArr = board[index]; //assigning the empty arrays of the board to each one of the columns
+  console.log(columnArr); //this gives us the value of each of the arrays in the board game 
+  //getting the index of the first 0 in the column array
+  let rowIndex = columnArr.indexOf(0); // finding the first index of zero in a row 
+  //if the column is full there is no zeros, so index of becomes -1. this code checks for that, nothing in no zeros are available ( column full);
+  if(rowIndex === -1) return; //if all of the column array is not a zero, which position within the row id zero? updating the position of the array 
+  //update the column array within the board with a player whose turn it is. 
+  columnArr[rowIndex] = turn; //updated the board array 
+  //this is for the flip between 1 and -1 essentially changing turns. 
+  turn *= -1; // this changes out turns between 1 and -1. 
+  //update the winner 
+  winner = getWinner();
+  renderBoard();  //updating the state of the game
+}
+}
 });
 
 

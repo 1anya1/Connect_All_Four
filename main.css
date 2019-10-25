@@ -5,6 +5,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image:linear-gradient(RoyalBlue, DodgerBlue, CornflowerBlue, DeepSkyBlue, LightSkyBlue );
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
   
   }
   section.gameBoard{
