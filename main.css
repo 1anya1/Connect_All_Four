@@ -20,7 +20,7 @@ body {
     margin-bottom: 10vmin;
     background:MediumBlue;
   }
-  
+
   section.gameBoard > div{ 
     border-radius:50%;
     border:1px solid blue;
@@ -32,13 +32,18 @@ body {
     grid-gap: 1vmin;
   }
   section.columnSelector > div{ 
-    border-top: 6vmin solid rgba(53, 50, 154, 0.878);
-    border-left: 5vmin solid transparent;
-    border-right: 5vmin solid transparent;
-    margin-bottom: 5px;
+      /*The Shapes of CSS -- many shapes of CSS*/
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 50px solid rgba(53, 50, 154, 0.878);
+    margin-bottom: 10px;
+    
   }
   section.columnSelector  div:hover{
     border-top-color: pink;
+    /* only calling on the top part bc we dont want to show the transparent sides*/ 
   }
   
   /* *{
