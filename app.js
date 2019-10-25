@@ -1,3 +1,76 @@
+$(()=>{
+// constants 
+const playersColors = {  // this is an object that will hold all of the players color plays. Our object Literal  look up datastructure
+    '0': 'white',
+    '1': 'yellow',
+    '-1': 'red'
+  
+  }
+
+
+//variables --- declaration of board valiables
+let board; 
+let turn;
+ let winner;
+
+
+//eventListners
+// adding event listner on the column selector 
+document.querySelector('section.columnSelector') //this returns the DOM element
+.addEventListener('click',handleClick );// creating event listner for the specific event
+
+
+//functions
+init(); /// board rendering, players position, setting of null to win position
+function init(){
+  board = [
+    [0,0,0,0,0,0], //column 1 starts with bottom left (c0r0) foing all the way up tp (cor6)
+    [0,0,0,0,0,0], // column 2
+    [0,0,0,0,0,0], // column 3
+    [0,0,0,0,0,0], // column 4
+    [0,0,0,0,0,0], // column 5
+    [0,0,0,0,0,0], // column 6
+    [0,0,0,0,0,0]  // column 7
+  ];
+  turn = 1;
+  winner = null; //1 -1 null and T for the tie for potential values 
+  render(); //calling on function render 
+
+}
+function render () {  /// from state to dom transfer , render the board for each nested column render the board 
+    board.forEach(function(columnArr, columnIdx){
+    // hide or show columns marker depending if there are zeros or not ( if the column is full disable the triangle)
+    const marker = document.getElementById(`column${columnIdx}`)
+    if(columnArr.indexOf(0)=== -1){ // this represents a full column.. eek column is full 
+      marker.style.visibility = 'hidden'; // this hides the column triangle if it is full 
+    } else{
+      marker.style.visibility = 'visible';
+    }
+    //looping through the arrays in the board, using two parameters colmn array and extracting the index of the column array 
+    columnArr.forEach(function(cellVal, rowIndex ){
+      //going through each column at a time and checking each one of the cell values. 
+      const div = document.getElementById(`c${columnIdx}r${rowIndex}`); //getting the id's 
+      // console.log(div);
+      div.style.backgroundColor = playersColors[cellVal]; // this renders the board 
+      });
+    
+      });
+      //rendering message
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------old Code--------------------*/
 // $(() => {
     
 //     var turn = 0;
