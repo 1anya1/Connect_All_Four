@@ -93,10 +93,10 @@ $(()=>{ ///on load function
     }
     function getWinner(){
       //return the winner, 't', or null
-      let winner=null;
-      for(let columnIdx = 0; columnIdx<board.length; columnIdx++){
-        winner= checkColumn(columnIdx);
-        if(winner) break;
+      let winner=null; //setting winner null (false) to runrun the function
+      for(let columnIdx = 0; columnIdx<board.length; columnIdx++){ //this loop irretirates through all the columns of the board to find the values they have been reassigned/ assigned
+        winner= checkColumn(columnIdx); //initiating the function (below) that is calling on the function that checks each column
+        if(winner) break;// if winner is present then the program stops running 
       } return winner;
     }
     function checkColumn (columnIdx){
@@ -108,12 +108,13 @@ $(()=>{ ///on load function
       return winner; 
     }
     function checkUp(columnIdx, rowIdx) {
-      if (rowIdx > 2) return null;
+      if (rowIdx > 2) return null; //if row index is larger than 3 run the program 
       const columnArr = board[columnIdx];
-      return ( Math.abs(columnArr[rowIdx] + columnArr[rowIdx + 1] + columnArr[rowIdx + 2] + columnArr[rowIdx + 3]) === 4 ) ? columnArr[rowIdx] : null;
+      return ( Math.abs(columnArr[rowIdx] + columnArr[rowIdx + 1] + columnArr[rowIdx + 2] + columnArr[rowIdx + 3]) === 4 ) ? columnArr[rowIdx] : null; 
+      //using tertriary equation to check if there is a match. 
     }
     function checkRight (columnIdx, rowIdx){
-      if(columnIdx>3) return null;
+      if(columnIdx>3) return null;// if the column has more than 3 chips than we run the return function 
       return ( Math.abs(board[columnIdx][rowIdx] + board[columnIdx + 1][rowIdx] + board[columnIdx + 2][rowIdx] + board[columnIdx + 3][rowIdx]) === 4 ) ? board[columnIdx][rowIdx] : null;
     }
 });
