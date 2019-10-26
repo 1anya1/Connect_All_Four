@@ -102,26 +102,29 @@ $(()=>{ ///on load function
     }
     function checkColumn (columnIdx){  //check to see if we have a winner 
       let winner = null; // no winner is null 
-      for (let rowIdx=0; rowIdx < board[columnIdx].length; rowIdx++){
-        winner = checkUp(columnIdx, rowIdx) || checkRight(columnIdx, rowIdx);
-      if (winner) break; 
+      for (let rowIdx=0; rowIdx < board[columnIdx].length; rowIdx++){// this states that is the column index is greater than zero then to check of either player 1 or playerr 2 has a winning combo  
+        winner = checkHorizontal(columnIdx, rowIdx) || checkVertical(columnIdx, rowIdx); // checking the two functions to see if there is a winner 
+      if (winner) break; // if there is a winner, end game 
       }
       return winner; 
     }
-    function checkUp(columnIdx, rowIdx) { // checking vertically 
-      if (rowIdx > 2) return null; //if row index is larger than 3 run the program 
-      const columnArr = board[columnIdx];
+    function checkVertical(columnIdx, rowIdx) { // checking vertically 
+      if (rowIdx > 2) return null; //if row index is larger than 3 chips the function will run to see if there is a winner 
+      const columnArr = board[columnIdx]; //declaring column array that grabs the column index from the board 
       return ( Math.abs(columnArr[rowIdx] + columnArr[rowIdx + 1] + columnArr[rowIdx + 2] + columnArr[rowIdx + 3]) === 4 ) ? columnArr[rowIdx] : null; 
-      //using tertriary equation to check if there is a match. 
+      //using tertriary equation to check if there is a match of 4 if not null, the game continues 
+      // Math.abs turns negative value to a positive one absolute value of a number 
+      
     }
-    function checkRight (columnIdx, rowIdx){ //checking horizontally 
-      if(columnIdx>3) return null;// if the column has more than 3 chips than we run the return function 
+  
+    function checkHorizontal (columnIdx, rowIdx){ //checking horizontally 
+      if(columnIdx>3) return null;// if the adjacent columns have 3 or more the function will run 
       return ( Math.abs(board[columnIdx][rowIdx] + board[columnIdx + 1][rowIdx] + board[columnIdx + 2][rowIdx] + board[columnIdx + 3][rowIdx]) === 4 ) ? board[columnIdx][rowIdx] : null;
     }
 });
     
 // $(() => {
-//   var turn = 0;
+//   var turn = 0; // starting with turn 1 
 //   const rows = 7;
 //   const columns = 6;
 
