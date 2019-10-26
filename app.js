@@ -111,7 +111,7 @@ $(()=>{ ///on load function
     function checkVertical(columnIdx, rowIdx) { // checking vertically 
       if (rowIdx > 2) return null; //if row index is larger than 3 chips the function will run to see if there is a winner 
       const columnArr = board[columnIdx]; //declaring column array that grabs the column index from the board 
-      return ( Math.abs(columnArr[rowIdx] + columnArr[rowIdx + 1] + columnArr[rowIdx + 2] + columnArr[rowIdx + 3]) === 4 ) ? columnArr[rowIdx] : null; 
+      return ( Math.abs(columnArr[rowIdx] + columnArr[rowIdx + 1] + columnArr[rowIdx + 2] + columnArr[rowIdx + 3]) === 4 ) ? columnArr[rowIdx] : null; // = +1 +2  move up the array and pull the value of that specific div if all of the divs are 1 or -1 within the line then the game is won 
       //using tertriary equation to check if there is a match of 4 if not null, the game continues 
       // Math.abs turns negative value to a positive one absolute value of a number 
       
